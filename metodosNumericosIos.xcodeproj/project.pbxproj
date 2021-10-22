@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B4DF1697271F260A00DD622D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF1696271F260A00DD622D /* ResultsViewController.swift */; };
+		B4DF1699271FBFDF00DD622D /* RootResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF1698271FBFDF00DD622D /* RootResultModel.swift */; };
+		B4DF169C271FC08B00DD622D /* NewtonMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF169B271FC08B00DD622D /* NewtonMethod.swift */; };
 		B4F748FE270E328A00F135D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F748FD270E328A00F135D7 /* AppDelegate.swift */; };
 		B4F74900270E328A00F135D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F748FF270E328A00F135D7 /* SceneDelegate.swift */; };
 		B4F74902270E328A00F135D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F74901270E328A00F135D7 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		46865716B54496DE92A2B635 /* Pods_metodosNumericosIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metodosNumericosIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30035B79BD12ABD48BA3891 /* Pods-metodosNumericosIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metodosNumericosIos.release.xcconfig"; path = "Target Support Files/Pods-metodosNumericosIos/Pods-metodosNumericosIos.release.xcconfig"; sourceTree = "<group>"; };
 		B4DF1696271F260A00DD622D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		B4DF1698271FBFDF00DD622D /* RootResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResultModel.swift; sourceTree = "<group>"; };
+		B4DF169B271FC08B00DD622D /* NewtonMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonMethod.swift; sourceTree = "<group>"; };
 		B4F748FA270E328A00F135D7 /* metodosNumericosIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metodosNumericosIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F748FD270E328A00F135D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F748FF270E328A00F135D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B4DF169A271FBFEC00DD622D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4DF1698271FBFDF00DD622D /* RootResultModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B4F748F1270E328A00F135D7 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +94,7 @@
 		B4F748FC270E328A00F135D7 /* metodosNumericosIos */ = {
 			isa = PBXGroup;
 			children = (
+				B4DF169A271FBFEC00DD622D /* Models */,
 				B4F748FD270E328A00F135D7 /* AppDelegate.swift */,
 				B4F748FF270E328A00F135D7 /* SceneDelegate.swift */,
 				B4F74901270E328A00F135D7 /* ViewController.swift */,
@@ -90,6 +103,7 @@
 				B4F74908270E328C00F135D7 /* LaunchScreen.storyboard */,
 				B4F7490B270E328C00F135D7 /* Info.plist */,
 				B4DF1696271F260A00DD622D /* ResultsViewController.swift */,
+				B4DF169B271FC08B00DD622D /* NewtonMethod.swift */,
 			);
 			path = metodosNumericosIos;
 			sourceTree = "<group>";
@@ -210,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F74902270E328A00F135D7 /* ViewController.swift in Sources */,
+				B4DF169C271FC08B00DD622D /* NewtonMethod.swift in Sources */,
+				B4DF1699271FBFDF00DD622D /* RootResultModel.swift in Sources */,
 				B4F748FE270E328A00F135D7 /* AppDelegate.swift in Sources */,
 				B4F74900270E328A00F135D7 /* SceneDelegate.swift in Sources */,
 				B4DF1697271F260A00DD622D /* ResultsViewController.swift in Sources */,
