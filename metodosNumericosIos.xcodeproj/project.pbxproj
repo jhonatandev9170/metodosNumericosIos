@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42DF4082724757C00B70EAC /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42DF4072724757C00B70EAC /* Functions.swift */; };
+		B42DF4102724ADF900B70EAC /* NewtonRaphson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42DF40F2724ADF900B70EAC /* NewtonRaphson.swift */; };
+		B42DF4132724B6BE00B70EAC /* NewtonRaphsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42DF4112724B6BE00B70EAC /* NewtonRaphsonViewController.swift */; };
+		B42DF4142724B6BE00B70EAC /* NewtonRaphsonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42DF4122724B6BE00B70EAC /* NewtonRaphsonViewController.xib */; };
 		B4DF1697271F260A00DD622D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF1696271F260A00DD622D /* ResultsViewController.swift */; };
-		B4DF1699271FBFDF00DD622D /* RootResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF1698271FBFDF00DD622D /* RootResultModel.swift */; };
-		B4DF169C271FC08B00DD622D /* NewtonMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF169B271FC08B00DD622D /* NewtonMethod.swift */; };
+		B4DF1699271FBFDF00DD622D /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF1698271FBFDF00DD622D /* ResultModel.swift */; };
 		B4F748FE270E328A00F135D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F748FD270E328A00F135D7 /* AppDelegate.swift */; };
 		B4F74900270E328A00F135D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F748FF270E328A00F135D7 /* SceneDelegate.swift */; };
 		B4F74902270E328A00F135D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F74901270E328A00F135D7 /* ViewController.swift */; };
 		B4F74905270E328A00F135D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F74903270E328A00F135D7 /* Main.storyboard */; };
 		B4F74907270E328C00F135D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F74906270E328C00F135D7 /* Assets.xcassets */; };
 		B4F7490A270E328C00F135D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F74908270E328C00F135D7 /* LaunchScreen.storyboard */; };
+		B4FE4428272711B60014D6EF /* UIMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE4427272711B60014D6EF /* UIMethodViewController.swift */; };
+		B4FE442A272713160014D6EF /* UIMethodVIewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE4429272713160014D6EF /* UIMethodVIewControllerFactory.swift */; };
+		B4FE442D272718E50014D6EF /* BiseccionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE442B272718E50014D6EF /* BiseccionViewController.swift */; };
+		B4FE442E272718E50014D6EF /* BiseccionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FE442C272718E50014D6EF /* BiseccionViewController.xib */; };
 		BE5C0994D85EC6EA1F2BDB2B /* Pods_metodosNumericosIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46865716B54496DE92A2B635 /* Pods_metodosNumericosIos.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,9 +30,12 @@
 		19B0A5507112725FFF0C741D /* Pods-metodosNumericosIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metodosNumericosIos.debug.xcconfig"; path = "Target Support Files/Pods-metodosNumericosIos/Pods-metodosNumericosIos.debug.xcconfig"; sourceTree = "<group>"; };
 		46865716B54496DE92A2B635 /* Pods_metodosNumericosIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metodosNumericosIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30035B79BD12ABD48BA3891 /* Pods-metodosNumericosIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metodosNumericosIos.release.xcconfig"; path = "Target Support Files/Pods-metodosNumericosIos/Pods-metodosNumericosIos.release.xcconfig"; sourceTree = "<group>"; };
+		B42DF4072724757C00B70EAC /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		B42DF40F2724ADF900B70EAC /* NewtonRaphson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtonRaphson.swift; sourceTree = "<group>"; };
+		B42DF4112724B6BE00B70EAC /* NewtonRaphsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonRaphsonViewController.swift; sourceTree = "<group>"; };
+		B42DF4122724B6BE00B70EAC /* NewtonRaphsonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewtonRaphsonViewController.xib; sourceTree = "<group>"; };
 		B4DF1696271F260A00DD622D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		B4DF1698271FBFDF00DD622D /* RootResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResultModel.swift; sourceTree = "<group>"; };
-		B4DF169B271FC08B00DD622D /* NewtonMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonMethod.swift; sourceTree = "<group>"; };
+		B4DF1698271FBFDF00DD622D /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		B4F748FA270E328A00F135D7 /* metodosNumericosIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metodosNumericosIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F748FD270E328A00F135D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F748FF270E328A00F135D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +44,10 @@
 		B4F74906270E328C00F135D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F74909270E328C00F135D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F7490B270E328C00F135D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4FE4427272711B60014D6EF /* UIMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMethodViewController.swift; sourceTree = "<group>"; };
+		B4FE4429272713160014D6EF /* UIMethodVIewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMethodVIewControllerFactory.swift; sourceTree = "<group>"; };
+		B4FE442B272718E50014D6EF /* BiseccionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiseccionViewController.swift; sourceTree = "<group>"; };
+		B4FE442C272718E50014D6EF /* BiseccionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BiseccionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +82,7 @@
 		B4DF169A271FBFEC00DD622D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B4DF1698271FBFDF00DD622D /* RootResultModel.swift */,
+				B4DF1698271FBFDF00DD622D /* ResultModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,6 +108,8 @@
 		B4F748FC270E328A00F135D7 /* metodosNumericosIos */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE44252727113A0014D6EF /* MethodFactory */,
+				B4FE44242726FF1A0014D6EF /* Metodos */,
 				B4DF169A271FBFEC00DD622D /* Models */,
 				B4F748FD270E328A00F135D7 /* AppDelegate.swift */,
 				B4F748FF270E328A00F135D7 /* SceneDelegate.swift */,
@@ -103,9 +119,30 @@
 				B4F74908270E328C00F135D7 /* LaunchScreen.storyboard */,
 				B4F7490B270E328C00F135D7 /* Info.plist */,
 				B4DF1696271F260A00DD622D /* ResultsViewController.swift */,
-				B4DF169B271FC08B00DD622D /* NewtonMethod.swift */,
+				B42DF4072724757C00B70EAC /* Functions.swift */,
 			);
 			path = metodosNumericosIos;
+			sourceTree = "<group>";
+		};
+		B4FE44242726FF1A0014D6EF /* Metodos */ = {
+			isa = PBXGroup;
+			children = (
+				B42DF4112724B6BE00B70EAC /* NewtonRaphsonViewController.swift */,
+				B42DF4122724B6BE00B70EAC /* NewtonRaphsonViewController.xib */,
+				B42DF40F2724ADF900B70EAC /* NewtonRaphson.swift */,
+				B4FE442B272718E50014D6EF /* BiseccionViewController.swift */,
+				B4FE442C272718E50014D6EF /* BiseccionViewController.xib */,
+			);
+			path = Metodos;
+			sourceTree = "<group>";
+		};
+		B4FE44252727113A0014D6EF /* MethodFactory */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE4427272711B60014D6EF /* UIMethodViewController.swift */,
+				B4FE4429272713160014D6EF /* UIMethodVIewControllerFactory.swift */,
+			);
+			path = MethodFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +206,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F7490A270E328C00F135D7 /* LaunchScreen.storyboard in Resources */,
+				B42DF4142724B6BE00B70EAC /* NewtonRaphsonViewController.xib in Resources */,
 				B4F74907270E328C00F135D7 /* Assets.xcassets in Resources */,
 				B4F74905270E328A00F135D7 /* Main.storyboard in Resources */,
+				B4FE442E272718E50014D6EF /* BiseccionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,11 +262,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FE442D272718E50014D6EF /* BiseccionViewController.swift in Sources */,
+				B4FE4428272711B60014D6EF /* UIMethodViewController.swift in Sources */,
 				B4F74902270E328A00F135D7 /* ViewController.swift in Sources */,
-				B4DF169C271FC08B00DD622D /* NewtonMethod.swift in Sources */,
-				B4DF1699271FBFDF00DD622D /* RootResultModel.swift in Sources */,
+				B4DF1699271FBFDF00DD622D /* ResultModel.swift in Sources */,
+				B42DF4082724757C00B70EAC /* Functions.swift in Sources */,
+				B42DF4132724B6BE00B70EAC /* NewtonRaphsonViewController.swift in Sources */,
+				B42DF4102724ADF900B70EAC /* NewtonRaphson.swift in Sources */,
 				B4F748FE270E328A00F135D7 /* AppDelegate.swift in Sources */,
 				B4F74900270E328A00F135D7 /* SceneDelegate.swift in Sources */,
+				B4FE442A272713160014D6EF /* UIMethodVIewControllerFactory.swift in Sources */,
 				B4DF1697271F260A00DD622D /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

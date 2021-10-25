@@ -22,26 +22,43 @@
                                     <constraint firstAttribute="height" constant="40" id="fze-i6-gPE"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Calcular"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calcular" titleAlignment="center"/>
                                 <connections>
-                                    <action selector="CalculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uP3-md-AlU"/>
                                     <segue destination="boZ-LG-7vV" kind="show" id="V6Z-dD-jNa"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-wz-b5B">
-                                <rect key="frame" x="0.0" y="67" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seleccionar Metodo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-LX-bEm">
+                                <rect key="frame" x="123" y="88" width="168.5" height="24.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-9w-uLp">
+                                <rect key="frame" x="10" y="122.5" width="394" height="669.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ccd-ZL-xUy" secondAttribute="trailing" constant="30" id="6h4-tp-N8w"/>
                             <constraint firstItem="Ccd-ZL-xUy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="AGe-5j-JHf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fLX-9w-uLp" secondAttribute="trailing" constant="10" id="H3W-Im-bcu"/>
+                            <constraint firstItem="Ccd-ZL-xUy" firstAttribute="top" secondItem="fLX-9w-uLp" secondAttribute="bottom" constant="10" id="IG6-gb-y5m"/>
+                            <constraint firstItem="fLX-9w-uLp" firstAttribute="top" secondItem="gyP-LX-bEm" secondAttribute="bottom" constant="10" id="UU4-lT-Aaa"/>
+                            <constraint firstItem="fLX-9w-uLp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Znk-6K-mlk"/>
                             <constraint firstItem="Ccd-ZL-xUy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="fRX-B8-QWh"/>
+                            <constraint firstItem="gyP-LX-bEm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tJ4-uG-lOE"/>
+                            <constraint firstItem="gyP-LX-bEm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zME-FE-pZs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3yv-I9-cY4"/>
+                    <navigationItem key="navigationItem" id="3yv-I9-cY4">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="InputsView" destination="fLX-9w-uLp" id="mvF-GY-7sn"/>
+                        <outlet property="calculateBtn" destination="Ccd-ZL-xUy" id="9G7-2E-dJB"/>
+                        <outlet property="methodTextField" destination="gyP-LX-bEm" id="VAE-zc-rO2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

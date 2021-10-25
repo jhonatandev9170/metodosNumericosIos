@@ -11,7 +11,7 @@ class ResultsViewController: UIViewController
 {
     let cellHeight=25.0
     var dataLabel:[String]=[]
-    var data:[RootResultModel]=[]
+    var data:[ResultModel]=[]
     var cellWidth: Double {
         return self.view.frame.size.width/5.0    }
 
