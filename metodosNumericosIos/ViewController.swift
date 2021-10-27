@@ -53,7 +53,8 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let method = currentViewController?.getMethod()
+
+        let method = currentViewController?.getMethod() 
         let resultVC = segue.destination as! ResultsViewController
         resultVC.dataLabel=method!.getDataLabel()
         resultVC.title=methodTextField.text
@@ -131,7 +132,7 @@ extension ViewController:UIPickerViewDataSource,UIPickerViewDelegate{
         case 1 :
             methodTypeSelected(row)
         case 2 :
-            if !methodName.isEmpty{methodSelected(row)}
+            methodSelected(row)
         default:
             calculateBtn.isHidden=false
         }
@@ -141,7 +142,8 @@ extension ViewController:UIPickerViewDataSource,UIPickerViewDelegate{
         methodTypeTextField.text = methodType[row]
         methodTypeTextField.resignFirstResponder()
         methodName =  MethodTypes.getMethodName(methodType: methodType[row])
-
+        methodTextField.text = nil
+        removeCurrentViewController()
     }
     func methodSelected (_ row:Int){
         methodTextField.text = methodName[row]

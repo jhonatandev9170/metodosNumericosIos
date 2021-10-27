@@ -10,7 +10,7 @@ import SpreadsheetView
 class ResultsViewController: UIViewController
 {
     let cellHeight=25.0
-    var dataLabel:[String]=[]
+    var dataLabel:[String]=["Hola" , "gente"]
     var data:[DataModel]=[]
     var cellWidth: Double {
         return self.view.frame.size.width/5.0    }
@@ -24,6 +24,18 @@ class ResultsViewController: UIViewController
 
         }
 
+    @IBAction func ExportButton(_ sender: Any) {
+        let fileName = "header.csv"
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
+        let csvString = Funcs.toString(dataLabel: dataLabel, data: data)
+         do {
+             try csvString.write(to: path!,atomically: true,encoding: .utf8)
+             let export = UIActivityViewController(activityItems: [path as Any], applicationActivities: nil)
+             self.present(export,animated: true,completion: nil)
+         } catch {
+             print("error creating file")
+         }
+    }
 }
 
 extension ResultsViewController:SpreadsheetViewDataSource{

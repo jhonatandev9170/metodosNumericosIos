@@ -9,6 +9,4 @@ import Foundation
 protocol Method{
     func getData()->[DataModel]
     func getDataLabel()->[String]
-    
-    
 }
