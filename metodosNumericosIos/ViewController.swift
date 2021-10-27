@@ -11,41 +11,59 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var inputsView: UIView!
     @IBOutlet weak var methodTextField: UITextField!
+    @IBOutlet weak var methodTypeTextField: UITextField!
     @IBOutlet weak var calculateBtn: UIButton!
     
-    var methodPicker: UIPickerView=UIPickerView()
-    let method = ["Newton-Raphson" ,"Biseccion" ,"Secante" ]
+    let methodPicker = UIPickerView()
+    let methodTypePicker = UIPickerView()
     
-    var currentViewController: UIViewController?
+    var methodType:[String] = []
+    var methodName:[String] = []
+    var method:Method!
+    
+    
+    var currentViewController: UIMethodViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title="Encontrar Raiz"
+        self.title="Metodos Numericos"
+        methodType = MethodTypes.methodTypes
         
+        methodTypePicker.delegate=self
+        methodTypePicker.dataSource=self
+        methodTypeTextField.inputView = methodTypePicker
+        methodTypePicker.tag = 1
         methodPicker.dataSource=self
         methodPicker.delegate=self
-        
         methodTextField.inputView = methodPicker
+        methodPicker.tag = 2
         
         calculateBtn.isHidden=true
         
+        
+    }
+    func addMethodView(methodName:String){
+        removeCurrentViewController()
+        calculateBtn.isHidden=true
+        currentViewController = UIMethodViewControllerFactory.buildUIMethod(method: methodName)
+        if let vc =  currentViewController{
+            add(asChildViewController: vc )
+            calculateBtn.isHidden=false
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let method = currentViewController?.getMethod()
+        let resultVC = segue.destination as! ResultsViewController
+        resultVC.dataLabel=method!.getDataLabel()
+        resultVC.title=methodTextField.text
+        resultVC.data=method!.getData()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
 
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let newton = NewtonRaphson(function: "x*x-2", derived: "2*x", initPoint: 2.0, error: 0.0000001)
-        return
-        if let resultVC = segue.destination as? ResultsViewController {
-            resultVC.dataLabel=NewtonRaphson.dataLabel
-            resultVC.title=methodTextField.text
-            resultVC.data=newton.calculoRaiz()
-
-        }
     }
     private func add(asChildViewController viewController: UIViewController) {
         // Add Child View Controller
@@ -87,24 +105,50 @@ extension ViewController:UIPickerViewDataSource,UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return method.count
+        switch pickerView.tag{
+        case 1 :
+            return methodType.count
+        case 2 :
+            return methodName.count
+        default:
+            return 1
+        }
+        
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return method[row]
+        switch pickerView.tag{
+        case 1 :
+            return methodType[row]
+        case 2 :
+            return methodName[row]
+        default:
+            return "No data"
+        }
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //self.title = method[row]
-        methodTextField.text=method[row]
-        //self.title=method[row]
-        methodTextField.resignFirstResponder()
-        removeCurrentViewController()
-        calculateBtn.isHidden=true
-        //let vc = UIMethodViewControllerFactory.buildUIMethod(method: method[row])
-        if let vc = UIMethodViewControllerFactory.buildUIMethod(method: method[row]){
-            add(asChildViewController: vc )
+        switch pickerView.tag{
+        case 1 :
+            methodTypeSelected(row)
+        case 2 :
+            if !methodName.isEmpty{methodSelected(row)}
+        default:
             calculateBtn.isHidden=false
         }
-        
+
+    }
+    func methodTypeSelected (_ row:Int){
+        methodTypeTextField.text = methodType[row]
+        methodTypeTextField.resignFirstResponder()
+        methodName =  MethodTypes.getMethodName(methodType: methodType[row])
+
+    }
+    func methodSelected (_ row:Int){
+        methodTextField.text = methodName[row]
+        methodTextField.text=methodName[row]
+        addMethodView(methodName: methodName[row])
+        methodTextField.resignFirstResponder()
+
     }
     
 }

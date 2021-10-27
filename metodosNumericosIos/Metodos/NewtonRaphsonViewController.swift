@@ -16,14 +16,21 @@ class NewtonRaphsonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
 }
 extension NewtonRaphsonViewController:UIMethodViewController{
-    func printResults() {
+    func getMethod() -> Method{
+        let funcion = funcionTextField.text ?? "x*x-2"
+        let derivada = derivadaTextField.text!
+        let error=Double(errorTextField.text!)!
+        let initPoint = Double(initPointTextField.text!)!
+        return NewtonRaphsonMethod(function: funcion, derived: derivada, initPoint: initPoint, error: error)
         
     }
+    
+
+    
+
 }

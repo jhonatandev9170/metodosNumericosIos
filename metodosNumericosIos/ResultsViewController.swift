@@ -11,7 +11,7 @@ class ResultsViewController: UIViewController
 {
     let cellHeight=25.0
     var dataLabel:[String]=[]
-    var data:[ResultModel]=[]
+    var data:[DataModel]=[]
     var cellWidth: Double {
         return self.view.frame.size.width/5.0    }
 
@@ -38,7 +38,7 @@ extension ResultsViewController:SpreadsheetViewDataSource{
         }else{
             cell.backgroundColor = .white
             let element = data[indexPath.row-1].data[dataLabel[indexPath.column]]!
-            cell.setup(with: "\(element)")
+            cell.setup(with: "\(element.rounded(8))")
             cell.label.font = UIFont(name: "Arial", size: 13)
 
         }

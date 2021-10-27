@@ -1,5 +1,5 @@
 import Foundation
-struct ResultModel {
+struct DataModel {
     let data : [String : Double]
 }
 

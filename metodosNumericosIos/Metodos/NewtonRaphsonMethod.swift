@@ -6,12 +6,13 @@
 //
 
 import Foundation
-class NewtonRaphson{
+class NewtonRaphsonMethod:Method{
+
+    
     private let function:String
     private let derived:String
     private let error:Double
     private let initPoint:Double
-    static let dataLabel=["iteracion","xi","f(i)","d(i)","xi+1","error"]
     
     init(function:String ,derived:String,initPoint:Double ,error:Double) {
         self.function=function
@@ -20,20 +21,20 @@ class NewtonRaphson{
         self.error=error
     }
     
-    func calculoRaiz() -> [ResultModel] {
+    func getData() -> [DataModel] {
         var errorCalc=initPoint
         var root=initPoint
         var rootprev:Double
-        var data:[ResultModel]=[]
+        var data:[DataModel]=[]
         var i = 0.0
         while abs(errorCalc) >= error {
             i=i+1;
             rootprev=root
-            let fi=Functions.eval(function: function, x: root)
-            let di=Functions.eval(function: derived, x: root)
+            let fi=Funcs.eval(function: function, x: root)
+            let di=Funcs.eval(function: derived, x: root)
             root=root - fi/di
             errorCalc=(root-rootprev)/root
-            data.append(ResultModel(data: [
+            data.append(DataModel(data: [
                 "iteracion":i,
                 "xi":rootprev,
                 "f(i)":fi,
@@ -43,6 +44,9 @@ class NewtonRaphson{
             ]))
         }
         return data
+    }
+    func getDataLabel() -> [String] {
+        return ["iteracion","xi","f(i)","d(i)","xi+1","error"]
     }
     
 

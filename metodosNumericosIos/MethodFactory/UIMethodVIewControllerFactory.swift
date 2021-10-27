@@ -6,13 +6,14 @@
 //
 import UIKit
 class UIMethodViewControllerFactory{
-    static func buildUIMethod(method: String)->UIViewController?{
+    static func buildUIMethod(method: String)->UIMethodViewController?{
         switch method {
         case "Newton-Raphson":
             return NewtonRaphsonViewController()
         case "Biseccion":
             return BiseccionViewController()
-            
+        case "Trapecio Compuesto":
+            return TrapecioCompuestoViewController()
         default:
             return nil
         }

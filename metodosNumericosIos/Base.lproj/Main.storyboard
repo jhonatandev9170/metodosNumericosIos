@@ -28,14 +28,19 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seleccionar Metodo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-LX-bEm">
-                                <rect key="frame" x="123" y="88" width="168.5" height="24.5"/>
+                                <rect key="frame" x="123" y="132.5" width="168.5" height="24.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-9w-uLp">
-                                <rect key="frame" x="10" y="122.5" width="394" height="669.5"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-9w-uLp">
+                                <rect key="frame" x="10" y="165" width="394" height="630"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seleccionar Tipo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0b4-Hj-WOv">
+                                <rect key="frame" x="136.5" y="98" width="141" height="24.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -46,8 +51,10 @@
                             <constraint firstItem="Ccd-ZL-xUy" firstAttribute="top" secondItem="fLX-9w-uLp" secondAttribute="bottom" constant="10" id="IG6-gb-y5m"/>
                             <constraint firstItem="fLX-9w-uLp" firstAttribute="top" secondItem="gyP-LX-bEm" secondAttribute="bottom" constant="10" id="UU4-lT-Aaa"/>
                             <constraint firstItem="fLX-9w-uLp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Znk-6K-mlk"/>
+                            <constraint firstItem="0b4-Hj-WOv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cfn-5c-Uvu"/>
+                            <constraint firstItem="0b4-Hj-WOv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eZA-0I-CG1"/>
                             <constraint firstItem="Ccd-ZL-xUy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="fRX-B8-QWh"/>
-                            <constraint firstItem="gyP-LX-bEm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tJ4-uG-lOE"/>
+                            <constraint firstItem="gyP-LX-bEm" firstAttribute="top" secondItem="0b4-Hj-WOv" secondAttribute="bottom" constant="10" id="tJ4-uG-lOE"/>
                             <constraint firstItem="gyP-LX-bEm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zME-FE-pZs"/>
                         </constraints>
                     </view>
@@ -58,6 +65,7 @@
                         <outlet property="InputsView" destination="fLX-9w-uLp" id="mvF-GY-7sn"/>
                         <outlet property="calculateBtn" destination="Ccd-ZL-xUy" id="9G7-2E-dJB"/>
                         <outlet property="methodTextField" destination="gyP-LX-bEm" id="VAE-zc-rO2"/>
+                        <outlet property="methodTypeTextField" destination="0b4-Hj-WOv" id="qs4-XM-OA4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
