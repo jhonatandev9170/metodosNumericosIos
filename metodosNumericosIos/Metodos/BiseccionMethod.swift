@@ -11,6 +11,8 @@ class BiseccionMethod:Method {
     private let error:Double
     private let initPoint:Double
     private let finishPoint:Double
+    private var result:[Double]=[]
+    
     init(function:String ,initPoint:Double ,finishPoint:Double,error:Double) {
         self.function=function
         self.initPoint=initPoint
@@ -55,9 +57,16 @@ class BiseccionMethod:Method {
             errorCalc=(root-rootprev)/root
 
         }
+        result.append(root)
         return data
     }
-
+    func getResultLabel() -> [String] {
+        return ["x"]
+    }
+    
+    func getResult() -> [Double] {
+        return result
+    }
     
     
     

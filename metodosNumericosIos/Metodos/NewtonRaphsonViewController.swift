@@ -22,10 +22,10 @@ class NewtonRaphsonViewController: UIViewController {
 }
 extension NewtonRaphsonViewController:UIMethodViewController{
     func getMethod() -> Method{
-        let funcion = funcionTextField.text ?? "x*x-2"
-        let derivada = derivadaTextField.text!
-        let error=Double(errorTextField.text!)!
-        let initPoint = Double(initPointTextField.text!)!
+        let funcion = Funcs.getFuncion(funcionTextField.text)
+        let derivada = Funcs.getFuncion(derivadaTextField.text)
+        let error=Double(errorTextField.text!) ?? 2.0
+        let initPoint = Double(initPointTextField.text!) ?? 1.0
         return NewtonRaphsonMethod(function: funcion, derived: derivada, initPoint: initPoint, error: error)
         
     }

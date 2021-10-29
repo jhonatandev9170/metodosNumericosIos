@@ -24,7 +24,7 @@ class TrapecioCompuestoViewController: UIViewController {
 }
 extension TrapecioCompuestoViewController : UIMethodViewController{
     func getMethod() -> Method {
-        let funcion = funcionTextField.text!
+        let funcion = Funcs.getFuncion(funcionTextField.text)
         let initPoint=Double(initPointTextField.text!) ?? 1.0
         let finishPoint = Double(finishPointTextField.text!) ?? 1.0
         let intervalos = Int(intervalosTextField.text!) ?? 1

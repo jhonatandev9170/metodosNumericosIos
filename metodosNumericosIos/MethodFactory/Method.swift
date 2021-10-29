@@ -9,4 +9,6 @@ import Foundation
 protocol Method{
     func getData()->[DataModel]
     func getDataLabel()->[String]
+    func getResultLabel()->[String]
+    func getResult()->[Double]
 }

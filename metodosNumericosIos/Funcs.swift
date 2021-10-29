@@ -18,7 +18,10 @@ class Funcs {
         return result
         
     }
-    static func toString(dataLabel:[String],data:[DataModel])->String{
+    static func getFuncion(_ fun: String?)->String{
+        return fun=="" ? "x" : fun!
+    }
+    static func toString(dataLabel:[String],data:[DataModel],resultLabel:[String],result:[Double])->String{
         //print labels
         var csvString =  ""
         for label in dataLabel {
@@ -33,21 +36,20 @@ class Funcs {
                 csvString=csvString.appending("\(element),")
             }
             csvString=String(csvString.dropLast())
-            csvString=csvString.appending("\n")
+            csvString=csvString.appending("\n\n")
         }
+        //print Results
+        for i in 0...resultLabel.count-1 {
+            csvString=csvString.appending(resultLabel[i]+",\(result[i].rounded(8))\n")
+        }
+        
+        
         return csvString
         
         
     }
-    static func toDouble(_ x:Int)->Double{
-        var number = Double(x)
-        let divisor = pow(10.0, 8.0)
-        number = (number * divisor).rounded() / divisor
-        return number
-    }
-    static func toDouble(_ :String){
-        print("string")
-    }
+
+
 }
 extension Double {
     /// Rounds the double to decimal places value

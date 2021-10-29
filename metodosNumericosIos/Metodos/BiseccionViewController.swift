@@ -20,10 +20,10 @@ class BiseccionViewController: UIViewController,UIMethodViewController {
         // Do any additional setup after loading the view.
     }
     func getMethod() -> Method {
-        let funcion = funcionTextField.text!
-        let initPoint = Double(initPointTextField.text!)!
-        let finishPoint = Double(finishPointTextField.text!)!
-        let error=Double(errorTextField.text!)!
+        let funcion = Funcs.getFuncion(funcionTextField.text)
+        let initPoint = Double(initPointTextField.text!) ?? 0.0
+        let finishPoint = Double(finishPointTextField.text!) ?? 0.0
+        let error=Double(errorTextField.text!) ?? 10.0
         return BiseccionMethod(function: funcion, initPoint: initPoint, finishPoint: finishPoint, error: error)
     }
     

@@ -53,12 +53,15 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        let method = currentViewController?.getMethod() 
+        let method = currentViewController?.getMethod()
         let resultVC = segue.destination as! ResultsViewController
         resultVC.dataLabel=method!.getDataLabel()
         resultVC.title=methodTextField.text
         resultVC.data=method!.getData()
+        resultVC.result=method!.getResult()
+        resultVC.resultLabel=method!.getResultLabel()
+
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

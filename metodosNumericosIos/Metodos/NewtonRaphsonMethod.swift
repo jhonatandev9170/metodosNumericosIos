@@ -7,12 +7,11 @@
 
 import Foundation
 class NewtonRaphsonMethod:Method{
-
-    
     private let function:String
     private let derived:String
     private let error:Double
     private let initPoint:Double
+    private var result:[Double]=[]
     
     init(function:String ,derived:String,initPoint:Double ,error:Double) {
         self.function=function
@@ -43,11 +42,21 @@ class NewtonRaphsonMethod:Method{
                 "error":errorCalc
             ]))
         }
+        result.append(root)
         return data
     }
     func getDataLabel() -> [String] {
         return ["iteracion","xi","f(i)","d(i)","xi+1","error"]
     }
+    func getResultLabel() -> [String] {
+        return ["x"]
+    }
+    
+    func getResult() -> [Double] {
+        return result
+
+    }
+    
     
 
 }

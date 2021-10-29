@@ -2,8 +2,6 @@ import UIKit
 
 var greeting = "Hello, playground"
 
-Functions.toDouble("5")
-
-
-
-
+for i in 0...0{
+    print("d")
+}
