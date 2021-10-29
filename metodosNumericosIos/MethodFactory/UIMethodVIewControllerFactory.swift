@@ -14,6 +14,8 @@ class UIMethodViewControllerFactory{
             return BiseccionViewController()
         case "Trapecio Compuesto":
             return TrapecioCompuestoViewController()
+        case "Regresion Lineal":
+            return RegresionLinealViewController()
         default:
             return nil
         }

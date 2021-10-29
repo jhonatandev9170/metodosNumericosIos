@@ -11,6 +11,9 @@
 		B42DF4102724ADF900B70EAC /* NewtonRaphsonMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42DF40F2724ADF900B70EAC /* NewtonRaphsonMethod.swift */; };
 		B42DF4132724B6BE00B70EAC /* NewtonRaphsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42DF4112724B6BE00B70EAC /* NewtonRaphsonViewController.swift */; };
 		B42DF4142724B6BE00B70EAC /* NewtonRaphsonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B42DF4122724B6BE00B70EAC /* NewtonRaphsonViewController.xib */; };
+		B4D670E7272C462D00375B70 /* RegresionLinealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D670E5272C462D00375B70 /* RegresionLinealViewController.swift */; };
+		B4D670E8272C462D00375B70 /* RegresionLinealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D670E6272C462D00375B70 /* RegresionLinealViewController.xib */; };
+		B4D670EA272C476300375B70 /* RegresionLinealMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D670E9272C476300375B70 /* RegresionLinealMethod.swift */; };
 		B4DCCDB02728EA1200EE9D28 /* MethodTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DCCDAF2728EA1200EE9D28 /* MethodTypes.swift */; };
 		B4DF1697271F260A00DD622D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF1696271F260A00DD622D /* ResultsViewController.swift */; };
 		B4DF1699271FBFDF00DD622D /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF1698271FBFDF00DD622D /* DataModel.swift */; };
@@ -40,6 +43,9 @@
 		B42DF40F2724ADF900B70EAC /* NewtonRaphsonMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtonRaphsonMethod.swift; sourceTree = "<group>"; };
 		B42DF4112724B6BE00B70EAC /* NewtonRaphsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonRaphsonViewController.swift; sourceTree = "<group>"; };
 		B42DF4122724B6BE00B70EAC /* NewtonRaphsonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewtonRaphsonViewController.xib; sourceTree = "<group>"; };
+		B4D670E5272C462D00375B70 /* RegresionLinealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegresionLinealViewController.swift; sourceTree = "<group>"; };
+		B4D670E6272C462D00375B70 /* RegresionLinealViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegresionLinealViewController.xib; sourceTree = "<group>"; };
+		B4D670E9272C476300375B70 /* RegresionLinealMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegresionLinealMethod.swift; sourceTree = "<group>"; };
 		B4DCCDAF2728EA1200EE9D28 /* MethodTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodTypes.swift; sourceTree = "<group>"; };
 		B4DF1696271F260A00DD622D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		B4DF1698271FBFDF00DD622D /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -151,6 +157,9 @@
 				B4FE44332727887F0014D6EF /* TrapecioCompuestoViewController.swift */,
 				B4FE44342727887F0014D6EF /* TrapecioCompuestoViewController.xib */,
 				B4FE4437272788A10014D6EF /* TrapecioCompuestoMethod.swift */,
+				B4D670E5272C462D00375B70 /* RegresionLinealViewController.swift */,
+				B4D670E6272C462D00375B70 /* RegresionLinealViewController.xib */,
+				B4D670E9272C476300375B70 /* RegresionLinealMethod.swift */,
 			);
 			path = Metodos;
 			sourceTree = "<group>";
@@ -227,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F7490A270E328C00F135D7 /* LaunchScreen.storyboard in Resources */,
+				B4D670E8272C462D00375B70 /* RegresionLinealViewController.xib in Resources */,
 				B4FE44362727887F0014D6EF /* TrapecioCompuestoViewController.xib in Resources */,
 				B42DF4142724B6BE00B70EAC /* NewtonRaphsonViewController.xib in Resources */,
 				B4F74907270E328C00F135D7 /* Assets.xcassets in Resources */,
@@ -289,8 +299,10 @@
 				B4DCCDB02728EA1200EE9D28 /* MethodTypes.swift in Sources */,
 				B4FE4428272711B60014D6EF /* UIMethodViewController.swift in Sources */,
 				B4FE44352727887F0014D6EF /* TrapecioCompuestoViewController.swift in Sources */,
+				B4D670E7272C462D00375B70 /* RegresionLinealViewController.swift in Sources */,
 				B4F74902270E328A00F135D7 /* ViewController.swift in Sources */,
 				B4DF1699271FBFDF00DD622D /* DataModel.swift in Sources */,
+				B4D670EA272C476300375B70 /* RegresionLinealMethod.swift in Sources */,
 				B42DF4082724757C00B70EAC /* Funcs.swift in Sources */,
 				B42DF4132724B6BE00B70EAC /* NewtonRaphsonViewController.swift in Sources */,
 				B42DF4102724ADF900B70EAC /* NewtonRaphsonMethod.swift in Sources */,
