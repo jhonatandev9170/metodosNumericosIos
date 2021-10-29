@@ -42,11 +42,17 @@ class Funcs {
         for i in 0...resultLabel.count-1 {
             csvString=csvString.appending(resultLabel[i]+",\(result[i].rounded(8))\n")
         }
-        
-        
         return csvString
-        
-        
+    }
+    static func toArray(_ string:String)->[Double]{
+        var array:[Double] = []
+        var convertStr = String(string.dropFirst())
+        convertStr = String(convertStr.dropLast())
+        let strArray = convertStr.components(separatedBy: ",")
+        for element in strArray {
+            array.append(Double(element) ?? 0.0 )
+        }
+        return array
     }
 
 

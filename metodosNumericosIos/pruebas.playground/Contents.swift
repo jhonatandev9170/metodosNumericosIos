@@ -1,7 +1,4 @@
 import UIKit
 
 var greeting = "Hello, playground"
-
-for i in 0...0{
-    print("d")
-}
+print(Funcs.toArray("[1,2,3]"))
